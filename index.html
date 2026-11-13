@@ -1,0 +1,131 @@
+from pathlib import Path
+
+html = r'''<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10152d">
+  <title>TOSS KING RAJ BHAI | Cricket Telegram Channel</title>
+  <style>
+    :root {
+      --bg: #10152d;
+      --card: #1a2242;
+      --card2: #222d55;
+      --accent: #ffcf4a;
+      --accent2: #ff8b45;
+      --text: #fffdf6;
+      --muted: #c2c9df;
+      --line: rgba(255, 207, 74, .25);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; padding: 28px 16px;
+      display: grid; place-items: center;
+      color: var(--text); font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(92, 111, 220, .24), transparent 32%),
+        radial-gradient(circle at 90% 90%, rgba(255, 139, 69, .17), transparent 30%),
+        var(--bg);
+    }
+    .wrap { width: 100%; max-width: 470px; }
+    .card {
+      overflow: hidden; border-radius: 26px;
+      border: 1px solid var(--line);
+      background: linear-gradient(155deg, #222d55 0%, #171e3b 58%, #171a32 100%);
+      box-shadow: 0 25px 75px rgba(0,0,0,.42);
+    }
+    .hero {
+      text-align: center; padding: 34px 22px 26px;
+      background: linear-gradient(135deg, rgba(255,207,74,.13), transparent 60%);
+    }
+    .logo {
+      width: 96px; height: 96px; margin: 0 auto 17px;
+      display: grid; place-items: center; border-radius: 28px;
+      transform: rotate(-3deg);
+      border: 2px solid var(--accent);
+      background: linear-gradient(145deg, #303d70, #171e3b);
+      box-shadow: 0 0 0 7px rgba(255,207,74,.07), 0 12px 30px rgba(0,0,0,.25);
+      font-size: 45px;
+    }
+    .eyebrow { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: 2.7px; text-transform: uppercase; }
+    h1 { margin: 12px 0 9px; font-size: clamp(30px, 8vw, 40px); line-height: 1.04; letter-spacing: .4px; }
+    h1 span { color: var(--accent); }
+    .subtitle { max-width: 340px; margin: 0 auto; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .content { padding: 0 19px 22px; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 5px 0 15px; }
+    .stat { text-align: center; padding: 15px 10px; border-radius: 16px; border: 1px solid var(--line); background: rgba(255,255,255,.045); }
+    .stat strong { display: block; color: var(--accent); font-size: 13px; margin-bottom: 5px; }
+    .stat span { color: var(--muted); font-size: 11px; }
+    .section { padding: 17px; margin: 12px 0; border-radius: 17px; border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.045); }
+    .section h2 { margin: 0 0 12px; font-size: 16px; }
+    .section h2 em { color: var(--accent); font-style: normal; }
+    .points { display: grid; gap: 11px; }
+    .point { display: flex; align-items: flex-start; gap: 10px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .spark { color: var(--accent); font-weight: 900; }
+    .join-wrap { text-align: center; padding-top: 3px; }
+    .join {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      width: min(100%, 310px); min-height: 54px; padding: 15px 20px;
+      border-radius: 15px; color: #20213a; text-decoration: none;
+      background: linear-gradient(100deg, var(--accent), #ffad42);
+      font-size: 15px; font-weight: 900; letter-spacing: .3px;
+      box-shadow: 0 9px 28px rgba(255,177,58,.24);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .join:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(255,177,58,.34); }
+    .small { color: var(--muted); font-size: 11px; line-height: 1.6; margin: 11px 0 0; }
+    .disclaimer { margin: 15px 5px 0; color: #aab3d0; text-align: center; font-size: 10px; line-height: 1.6; }
+    footer { padding: 0 18px 21px; text-align: center; color: #8994b8; font-size: 11px; }
+    @media (max-width: 360px) { .hero { padding-inline: 16px; } .content { padding-inline: 13px; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <header class="hero">
+        <div class="logo" aria-hidden="true">🏏</div>
+        <div class="eyebrow">CRICKET • MATCH UPDATES • TELEGRAM</div>
+        <h1>TOSS KING<br><span>RAJ BHAI</span></h1>
+        <p class="subtitle">Cricket ka full update ek hi jagah! Match se judi baatein, toss updates aur game analysis ke liye Telegram channel join karein.</p>
+      </header>
+
+      <section class="content">
+        <div class="stats">
+          <div class="stat"><strong>🏆 MATCH TIME</strong><span>Cricket discussion & updates</span></div>
+          <div class="stat"><strong>📲 TELEGRAM</strong><span>Latest channel posts</span></div>
+        </div>
+
+        <div class="section">
+          <h2>Channel par kya milega? <em>⚡</em></h2>
+          <div class="points">
+            <div class="point"><span class="spark">✦</span><span>Match se pehle team news aur preview</span></div>
+            <div class="point"><span class="spark">✦</span><span>Toss ke time available updates</span></div>
+            <div class="point"><span class="spark">✦</span><span>Cricket match analysis aur discussion</span></div>
+            <div class="point"><span class="spark">✦</span><span>Ek simple jagah par latest Telegram posts</span></div>
+          </div>
+        </div>
+
+        <div class="section" style="text-align:center">
+          <h2>Ready ho? <em>Channel join karo!</em></h2>
+          <p class="subtitle" style="max-width:none;margin:0 auto 16px">TOSS KING RAJ BHAI ke saath cricket updates follow karein.</p>
+          <div class="join-wrap">
+            <!-- Replace this placeholder with your real Telegram channel URL -->
+            <a class="join" href="https://t.me/YOUR_CHANNEL_USERNAME" target="_blank" rel="noopener noreferrer">
+              <span>✈</span> TELEGRAM JOIN KAREIN
+            </a>
+          </div>
+          <p class="small">Button par tap karein aur Telegram channel open karein.</p>
+        </div>
+
+        <p class="disclaimer">Cricket analysis sirf information aur discussion ke liye hai. Koi result guaranteed nahi hai. Apne area ke applicable laws follow karein aur responsible decisions lein.</p>
+      </section>
+      <footer>© 2026 TOSS KING RAJ BHAI • All Rights Reserved</footer>
+    </div>
+  </main>
+</body>
+</html>
+'''
+path = Path("/mnt/data/toss-king-raj-bhai.html")
+path.write_text(html, encoding="utf-8")
+print(path)
